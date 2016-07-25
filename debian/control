@@ -116,8 +116,7 @@ Description: common ceph daemon libraries and management tools
 Package: ceph-mds
 Architecture: linux-any
 Depends: ceph-base (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
-Recommends: ceph-fs-common (= ${binary:Version}),
-            ceph-fuse (= ${binary:Version}),
+Recommends: ceph-fuse (= ${binary:Version}),
             libcephfs1 (= ${binary:Version})
 Replaces: ceph (<< 0.93-417)
 Breaks: ceph (<< 0.93-417)
@@ -353,34 +352,6 @@ Description: debugging symbols for ceph-common
  of common tools that allow one to interact with and administer a Ceph cluster.
  .
  This package contains the debugging symbols for ceph-common.
-
-Package: ceph-fs-common
-Architecture: linux-any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Conflicts: ceph-client-tools
-Suggests: ceph-mds (= ${binary:Version})
-Description: common utilities to mount and interact with a ceph file system
- Ceph is a massively scalable, open-source, distributed
- storage system that runs on commodity hardware and delivers object,
- block and file system storage.  This is a collection
- of common tools, including the mount utility, that allows one to mount the
- Ceph file system with the kernel client.
-
-Package: ceph-fs-common-dbg
-Architecture: linux-any
-Depends: ceph-fs-common (= ${binary:Version}), ${misc:Depends}
-Conflicts: ceph-client-tools-dbg
-Replaces: ceph-client-tools-dbg
-Section: debug
-Priority: extra
-Description: debugging symbols for ceph-fs-common
- Ceph is a massively scalable, open-source, distributed
- storage system that runs on commodity hardware and delivers object,
- block and file system storage.  This is a collection
- of common tools, including the mount utility, that allows one to mount the
- Ceph file system with the kernel client.
- .
- This package contains the debugging symbols for ceph-fs-common.
 
 Package: ceph-resource-agents
 Architecture: linux-any
